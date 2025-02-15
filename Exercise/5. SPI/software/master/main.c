@@ -1,7 +1,22 @@
 #include "main.h"
 
-//Cau hinh GPIO
-//Cap xung CLK 
+int main()
+{
+	uint8_t DataTrans[] = {1,3,9,10,15,19,90};//Data
+	RCC_Config();
+	GPIO_Config();
+	TIM_Config();
+	SPI_Init();
+	while(1)
+	{
+		for(int i = 0; i < 8; i++)
+		{
+			SPI_Master_Transmit(DataTrans[i]);
+			delay_ms(1000);
+		}
+	}
+}
+
 void RCC_Config()
 {
 	RCC_APB2PeriphClockCmd(SPI_RCC, ENABLE);
@@ -75,19 +90,3 @@ void SPI_Master_Transmit(uint8_t byte_out)
 	}
 }
 
-int main()
-{
-	uint8_t DataTrans[] = {1,3,9,10,15,19,90};//Data
-	RCC_Config();
-	GPIO_Config();
-	TIM_Config();
-	SPI_Init();
-	while(1)
-	{
-		for(int i = 0; i < 8; i++)
-		{
-			SPI_Master_Transmit(DataTrans[i]);
-			delay_ms(1000);
-		}
-	}
-}
