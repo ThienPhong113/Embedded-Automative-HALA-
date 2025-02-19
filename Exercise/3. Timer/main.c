@@ -6,7 +6,7 @@
 void RCC_Config()
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 }
 
 
@@ -23,25 +23,27 @@ void GPIO_Config()
 
 void TIM_Config()
 {
-	TIM_TimeBaseInitTypeDef timer2;
+	TIM_TimeBaseInitTypeDef timer;
 	
-	timer2.TIM_Prescaler = 7200 - 1;
-	timer2.TIM_Period = 0xFFFF;
-	timer2.TIM_CounterMode = TIM_CounterMode_Up;
-	timer2.TIM_ClockDivision = TIM_CKD_DIV1;
+	timer.TIM_Prescaler = 7200 - 1;
+	timer.TIM_Period = 0xFFFF;
+	timer.TIM_CounterMode = TIM_CounterMode_Up;
+	timer.TIM_ClockDivision = TIM_CKD_DIV1;
 	
-	TIM_TimeBaseInit(TIM2, &timer2);
-	TIM_Cmd(TIM2, ENABLE);
+	TIM_TimeBaseInit(TIM3, &timer);
+	TIM_Cmd(TIM3, ENABLE);
 }
 
 void delay_ms(uint32_t s)
 {
-	TIM_SetCounter(TIM2, 0);
-	while(TIM_GetCounter(TIM2) < s);
+	TIM_SetCounter(TIM3, 0);
+	while(TIM_GetCounter(TIM3) < s);
+//	uint32_t i;
+//	for(i = 0; i <= s * 1000; i++);
 }
 int main()
- {
-	 RCC_Config();
+{
+	RCC_Config();
 	GPIO_Config();
 	TIM_Config();
 	while(1)

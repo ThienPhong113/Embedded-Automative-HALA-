@@ -20,6 +20,7 @@ void TIM_Config();
 void GPIO_Config();
 
 void delay_ms(uint32_t ms);
+void delay_us(uint32_t us);
 
 void UART_Init(unsigned int baud, unsigned int parity_mode);
 uint8_t UART_CalculateParity(char cmd);

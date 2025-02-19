@@ -9,12 +9,12 @@ License Information: ThienPhong ThienPhong, ThienPhong, LIC=47GU5-GEQ27-30CNC-77
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
-Toolchain Path:  D:\Program Files\KeilC_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 6 (build 750)
-Assembler:       Armasm.exe V5.06 update 6 (build 750)
-Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
-Library Manager: ArmAr.exe V5.06 update 6 (build 750)
-Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+Toolchain Path:  D:\Program Files\KeilC_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
 CPU DLL:         SARMCM3.DLL V5.31.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
@@ -22,34 +22,26 @@ Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 E:\Github\Embedded-Automative-HALA-\Exercise\7. UART\software\uart.uvprojx
-Project File Date:  02/15/2025
+Project File Date:  02/17/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files\KeilC_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V6.14', folder: 'D:\Program Files\KeilC_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
 assembling startup_stm32f10x_ld.s...
-compiling system_stm32f10x.c...
 compiling misc.c...
+main.c(39): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+1 warning generated.
 compiling main.c...
-main.h(18): warning:  #1295-D: Deprecated declaration RCC_Config - give arg types
-  void RCC_Config();
-main.h(19): warning:  #1295-D: Deprecated declaration TIM_Config - give arg types
-  void TIM_Config();
-main.h(20): warning:  #1295-D: Deprecated declaration GPIO_Config - give arg types
-  void GPIO_Config();
-main.h(27): warning:  #1295-D: Deprecated declaration UART_Receive - give arg types
-  char UART_Receive();
-main.h(34): warning:  #1-D: last line of file ends without a newline
-  };
-main.c(33): warning:  #940-D: missing return statement at end of non-void function "UART_CalculateParity" 
-  }
-main.c: 6 warnings, 0 errors
-compiling stm32f10x_rcc.c...
+compiling system_stm32f10x.c...
 compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
 compiling stm32f10x_tim.c...
 linking...
-Program Size: Code=2780 RO-data=268 RW-data=8 ZI-data=1632  
-".\Objects\uart.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=1648 RO-data=252 RW-data=0 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\uart.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -81,21 +73,21 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\ARM\startup_stm32f10x_ld.s
       Source file:   Device\Source\system_stm32f10x.c
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\misc.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
       Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
 
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
@@ -104,7 +96,7 @@ Package Vendor: Keil
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

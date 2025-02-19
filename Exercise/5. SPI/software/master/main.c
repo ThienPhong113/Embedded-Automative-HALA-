@@ -2,6 +2,7 @@
 
 int main()
 {
+	volatile int i;
 	uint8_t DataTrans[] = {1,3,9,10,15,19,90};//Data
 	RCC_Config();
 	GPIO_Config();
@@ -9,7 +10,7 @@ int main()
 	SPI_Init();
 	while(1)
 	{
-		for(int i = 0; i < 8; i++)
+		for(i = 0; i < 7; i++)
 		{
 			SPI_Master_Transmit(DataTrans[i]);
 			delay_ms(1000);
@@ -43,7 +44,7 @@ void TIM_Config()
 {
 	TIM_TimeBaseInitTypeDef TIMER_InitStructure;
 	TIMER_InitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-	TIMER_InitStructure.TIM_Period = 399;
+	TIMER_InitStructure.TIM_Period = 36000 - 1;
 	TIMER_InitStructure.TIM_Prescaler = 1;
 	TIMER_InitStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	
@@ -54,7 +55,7 @@ void TIM_Config()
 void delay_ms(uint32_t ms)
 {
 	TIM_SetCounter(TIM2, 0);
-	while(TIM_GetCounter(TIM2) < ms);
+	while(TIM_GetCounter(TIM2) <  36 * ms);
 }
 
 //Tao xung clk
@@ -76,13 +77,14 @@ void SPI_Init()
 
 void SPI_Master_Transmit(uint8_t byte_out)
 {
+	int i; 
 	uint8_t byte_in;
 	//(1) Start Condition
 	GPIO_WriteBit(SPI_GPIO, SPI_CS_Pin, Bit_RESET);
 	delay_ms(1);
 	
 	//(2)Send and Receive 8bits to Slave
-	for(int i = 0; i < 8; i++)
+	for(i = 0; i < 8; i++)
 	{
 		GPIO_WriteBit(SPI_GPIO, SPI_MOSI_Pin, (byte_out << i) & 0x80);
 		byte_in = (byte_in << i) | (uint8_t)GPIO_ReadInputDataBit(SPI_GPIO, SPI_MISO_Pin);

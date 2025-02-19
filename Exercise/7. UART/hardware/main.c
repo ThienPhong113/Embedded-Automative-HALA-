@@ -8,7 +8,8 @@ int main()
 	UART_Config();
 	while(1)
 	{
-		
+		USART1_TransmitByte(0xfc);
+		delay_ms(1000);
 	}
 }
 

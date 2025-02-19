@@ -455,11 +455,11 @@ Image Symbol Table
     i.SystemInit                             0x080004a8   Section        0  system_stm32f10x.o(i.SystemInit)
     i.TIM_Cmd                                0x08000508   Section        0  stm32f10x_tim.o(i.TIM_Cmd)
     i.TIM_Config                             0x08000520   Section        0  main.o(i.TIM_Config)
-    i.TIM_GetCounter                         0x08000550   Section        0  stm32f10x_tim.o(i.TIM_GetCounter)
-    i.TIM_SetCounter                         0x08000556   Section        0  stm32f10x_tim.o(i.TIM_SetCounter)
-    i.TIM_TimeBaseInit                       0x0800055c   Section        0  stm32f10x_tim.o(i.TIM_TimeBaseInit)
-    i.delay_ms                               0x08000600   Section        0  main.o(i.delay_ms)
-    i.main                                   0x08000620   Section        0  main.o(i.main)
+    i.TIM_GetCounter                         0x08000554   Section        0  stm32f10x_tim.o(i.TIM_GetCounter)
+    i.TIM_SetCounter                         0x0800055a   Section        0  stm32f10x_tim.o(i.TIM_SetCounter)
+    i.TIM_TimeBaseInit                       0x08000560   Section        0  stm32f10x_tim.o(i.TIM_TimeBaseInit)
+    i.delay_ms                               0x08000604   Section        0  main.o(i.delay_ms)
+    i.main                                   0x08000624   Section        0  main.o(i.main)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     HEAP                                     0x20000060   Section      512  startup_stm32f10x_ld.o(HEAP)
     Heap_Mem                                 0x20000060   Data         512  startup_stm32f10x_ld.o(HEAP)
@@ -621,14 +621,14 @@ Image Symbol Table
     RCC_Config                               0x080003ad   Thumb Code    20  main.o(i.RCC_Config)
     SystemInit                               0x080004a9   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
     TIM_Cmd                                  0x08000509   Thumb Code    24  stm32f10x_tim.o(i.TIM_Cmd)
-    TIM_Config                               0x08000521   Thumb Code    48  main.o(i.TIM_Config)
-    TIM_GetCounter                           0x08000551   Thumb Code     6  stm32f10x_tim.o(i.TIM_GetCounter)
-    TIM_SetCounter                           0x08000557   Thumb Code     4  stm32f10x_tim.o(i.TIM_SetCounter)
-    TIM_TimeBaseInit                         0x0800055d   Thumb Code   122  stm32f10x_tim.o(i.TIM_TimeBaseInit)
-    delay_ms                                 0x08000601   Thumb Code    30  main.o(i.delay_ms)
-    main                                     0x08000621   Thumb Code    52  main.o(i.main)
-    Region$$Table$$Base                      0x08000658   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000668   Number         0  anon$$obj.o(Region$$Table)
+    TIM_Config                               0x08000521   Thumb Code    46  main.o(i.TIM_Config)
+    TIM_GetCounter                           0x08000555   Thumb Code     6  stm32f10x_tim.o(i.TIM_GetCounter)
+    TIM_SetCounter                           0x0800055b   Thumb Code     4  stm32f10x_tim.o(i.TIM_SetCounter)
+    TIM_TimeBaseInit                         0x08000561   Thumb Code   122  stm32f10x_tim.o(i.TIM_TimeBaseInit)
+    delay_ms                                 0x08000605   Thumb Code    26  main.o(i.delay_ms)
+    main                                     0x08000625   Thumb Code    52  main.o(i.main)
+    Region$$Table$$Base                      0x0800065c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800066c   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
 
@@ -640,9 +640,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000668, Max: 0x00008000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000066c, Max: 0x00008000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000668, Max: 0x00008000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000066c, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -714,18 +714,17 @@ Memory Map of the image
     0x080003c8   0x080003c8   0x000000e0   Code   RO         1050    i.SetSysClockTo72   system_stm32f10x.o
     0x080004a8   0x080004a8   0x00000060   Code   RO         1052    i.SystemInit        system_stm32f10x.o
     0x08000508   0x08000508   0x00000018   Code   RO          498    i.TIM_Cmd           stm32f10x_tim.o
-    0x08000520   0x08000520   0x00000030   Code   RO            6    i.TIM_Config        main.o
-    0x08000550   0x08000550   0x00000006   Code   RO          517    i.TIM_GetCounter    stm32f10x_tim.o
-    0x08000556   0x08000556   0x00000004   Code   RO          563    i.TIM_SetCounter    stm32f10x_tim.o
-    0x0800055a   0x0800055a   0x00000002   PAD
-    0x0800055c   0x0800055c   0x000000a4   Code   RO          569    i.TIM_TimeBaseInit  stm32f10x_tim.o
-    0x08000600   0x08000600   0x0000001e   Code   RO            7    i.delay_ms          main.o
-    0x0800061e   0x0800061e   0x00000002   PAD
-    0x08000620   0x08000620   0x00000038   Code   RO            8    i.main              main.o
-    0x08000658   0x08000658   0x00000010   Data   RO         1251    Region$$Table       anon$$obj.o
+    0x08000520   0x08000520   0x00000034   Code   RO            6    i.TIM_Config        main.o
+    0x08000554   0x08000554   0x00000006   Code   RO          517    i.TIM_GetCounter    stm32f10x_tim.o
+    0x0800055a   0x0800055a   0x00000004   Code   RO          563    i.TIM_SetCounter    stm32f10x_tim.o
+    0x0800055e   0x0800055e   0x00000002   PAD
+    0x08000560   0x08000560   0x000000a4   Code   RO          569    i.TIM_TimeBaseInit  stm32f10x_tim.o
+    0x08000604   0x08000604   0x00000020   Code   RO            7    i.delay_ms          main.o
+    0x08000624   0x08000624   0x00000038   Code   RO            8    i.main              main.o
+    0x0800065c   0x0800065c   0x00000010   Data   RO         1251    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000668, Size: 0x00000660, Max: 0x00002800, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800066c, Size: 0x00000660, Max: 0x00002800, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -741,7 +740,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       190          8          0          0          0     238594   main.o
+       196         20          0          0          0     238598   main.o
         64         26        236          0       1536        820   startup_stm32f10x_ld.o
        286          0          0          0          0       3280   stm32f10x_gpio.o
         64         12          0          0          0       1234   stm32f10x_rcc.o
@@ -749,9 +748,9 @@ Image component sizes
        328         28          0          0          0       1989   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      1136        116        252          0       1536     249028   Object Totals
+      1140        128        252          0       1536     249032   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-         6          0          0          0          0          0   (incl. Padding)
+         4          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -797,15 +796,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1388        132        252          0       1632     248604   Grand Totals
-      1388        132        252          0       1632     248604   ELF Image Totals
-      1388        132        252          0          0          0   ROM Totals
+      1392        144        252          0       1632     248608   Grand Totals
+      1392        144        252          0       1632     248608   ELF Image Totals
+      1392        144        252          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1640 (   1.60kB)
+    Total RO  Size (Code + RO Data)                 1644 (   1.61kB)
     Total RW  Size (RW Data + ZI Data)              1632 (   1.59kB)
-    Total ROM Size (Code + RO Data + RW Data)       1640 (   1.60kB)
+    Total ROM Size (Code + RO Data + RW Data)       1644 (   1.61kB)
 
 ==============================================================================
 

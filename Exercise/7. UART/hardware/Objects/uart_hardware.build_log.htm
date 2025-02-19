@@ -9,71 +9,48 @@ License Information: ThienPhong ThienPhong, ThienPhong, LIC=47GU5-GEQ27-30CNC-77
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
-Toolchain Path:  D:\Program Files\KeilC_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.14
-Assembler:       Armasm.exe V6.14
-Linker/Locator:  ArmLink.exe V6.14
-Library Manager: ArmAr.exe V6.14
-Hex Converter:   FromElf.exe V6.14
+Toolchain Path:  D:\Program Files\KeilC_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
 CPU DLL:         SARMCM3.DLL V5.31.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      UL2CM3.DLL V1.163.4.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 E:\Github\Embedded-Automative-HALA-\Exercise\7. UART\hardware\uart_hardware.uvprojx
-Project File Date:  02/15/2025
+Project File Date:  02/16/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.14', folder: 'D:\Program Files\KeilC_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files\KeilC_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/misc.c(131): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
-                                               ~ ^~~~~~~~~~~
-1 warning generated.
-compiling misc.c...
-compiling main.c...
 assembling startup_stm32f10x_ld.s...
-compiling stm32f10x_gpio.c...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_usart.c(22): warning: In file included from...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(49): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
-typedef struct
-        ^
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_usart.c(1043): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-  itmask = ((uint16_t)0x01 << (uint16_t)bitpos);
-         ~  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-2 warnings generated.
-compiling stm32f10x_usart.c...
+compiling misc.c...
 compiling stm32f10x_rcc.c...
-RTE/Device/STM32F103C6/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-            ^
-RTE/Device/STM32F103C6/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-    ^
-1 warning generated.
-compiling system_stm32f10x.c...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(22): warning: In file included from...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
-typedef struct
-        ^
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(725): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-             TIM_BDTRInitStruct->TIM_Break | TIM_BDTRInitStruct->TIM_BreakPolarity |
-             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(1982): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-  tmp = CCER_CCE_Set << TIM_Channel;
-      ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2012): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-  tmp = CCER_CCNE_Set << TIM_Channel;
-      ~ ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2057): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-  tmp1 = CCER_CCE_Set << (uint16_t)TIM_Channel;
-       ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
-5 warnings generated.
+compiling stm32f10x_usart.c...
+compiling main.c...
+main.h(11): warning:  #1295-D: Deprecated declaration RCC_Config - give arg types
+  void RCC_Config();
+main.h(12): warning:  #1295-D: Deprecated declaration TIM_Config - give arg types
+  void TIM_Config();
+main.h(13): warning:  #1295-D: Deprecated declaration GPIO_Config - give arg types
+  void GPIO_Config();
+main.h(14): warning:  #1295-D: Deprecated declaration UART_Config - give arg types
+  void UART_Config();
+main.h(18): warning:  #1-D: last line of file ends without a newline
+  void delay_ms(uint32_t ms);
+main.c(80): warning:  #1-D: last line of file ends without a newline
+  }
+main.c: 6 warnings, 0 errors
+compiling stm32f10x_gpio.c...
 compiling stm32f10x_tim.c...
+compiling system_stm32f10x.c...
 linking...
-Program Size: Code=608 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\uart_hardware.axf" - 0 Error(s), 9 Warning(s).
+Program Size: Code=1960 RO-data=268 RW-data=20 ZI-data=1636  
+".\Objects\uart_hardware.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -106,34 +83,34 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_ld.s
-      Source file:   Device\Source\system_stm32f10x.c
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\startup_stm32f10x_ld.s
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\misc.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
-      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\src\misc.c
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
 
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 
    * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
-Build Time Elapsed:  00:00:05
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

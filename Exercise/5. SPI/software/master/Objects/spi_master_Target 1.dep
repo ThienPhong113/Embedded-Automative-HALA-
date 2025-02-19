@@ -1,102 +1,90 @@
 Dependencies for Project 'spi_master', Target 'Target 1': (DO NOT MODIFY !)
-CompilerVersion: 6140000::V6.14::ARMCLANG
-F (.\main.c)(0x67AD5092)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o ./objects/main.o -MD)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
+F (.\main.c)(0x67B5D5FD)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (main.h)(0x67AD5092)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
-I (RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\Program Files\KeilC_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
-I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
-I (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
+I (.\RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
 F (.\main.h)(0x67AD5092)()
-F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\misc.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o ./objects/misc.o -MD)
+F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\misc.c)(0x61AD876E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
-I (RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\Program Files\KeilC_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
-I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
-I (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
+I (.\RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
-F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_gpio.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o ./objects/stm32f10x_gpio.o -MD)
+F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_gpio.c)(0x61AD876E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o .\objects\stm32f10x_gpio.o --omf_browse .\objects\stm32f10x_gpio.crf --depend .\objects\stm32f10x_gpio.d)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
-I (RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\Program Files\KeilC_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
-I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
-I (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
+I (.\RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
-F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_rcc.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o ./objects/stm32f10x_rcc.o -MD)
+F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_rcc.c)(0x61AD876E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o .\objects\stm32f10x_rcc.o --omf_browse .\objects\stm32f10x_rcc.crf --depend .\objects\stm32f10x_rcc.d)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
-I (RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\Program Files\KeilC_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
-I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
-I (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
+I (.\RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
-F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_tim.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o ./objects/stm32f10x_tim.o -MD)
+F (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_tim.c)(0x61AD876E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o .\objects\stm32f10x_tim.o --omf_browse .\objects\stm32f10x_tim.crf --depend .\objects\stm32f10x_tim.d)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
-I (RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\Program Files\KeilC_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
-I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
-I (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
+I (.\RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
 F (RTE\Device\STM32F103C6\RTE_Device.h)(0x5FC05DFA)()
-F (RTE\Device\STM32F103C6\startup_stm32f10x_ld.s)(0x61AD876E)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3-I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-Wa,armasm,--pd,"__UVISION_VERSION SETA 531" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_LD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_ld.o)
+F (RTE\Device\STM32F103C6\startup_stm32f10x_ld.s)(0x61AD876E)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"--pd "__UVISION_VERSION SETA 531" --pd "_RTE_ SETA 1" --pd "STM32F10X_LD SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_stm32f10x_ld.lst --xref -o .\objects\startup_stm32f10x_ld.o --depend .\objects\startup_stm32f10x_ld.d)
 F (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)()
-F (RTE\Device\STM32F103C6\system_stm32f10x.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C6-I./RTE/_Target_1-I"D:/Program Data/ArmPackage/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include"-I"D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
+F (RTE\Device\STM32F103C6\system_stm32f10x.c)(0x61AD876E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C6-I.\RTE\_Target_1-I"D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-I"D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc"-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_LD -D_RTE_-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
-I (RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x67AD4FDE)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\Program Files\KeilC_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
-I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
-I (D:\Program Files\KeilC_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\Program Data\ArmPackage\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
-I (RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
+I (.\RTE\Device\STM32F103C6\stm32f10x_conf.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
 I (D:\Program Data\ArmPackage\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
