@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'master_spi_hardware' 
+ * Project: 'spi_master_hardware' 
  * Target:  'Target 1' 
  */
 
