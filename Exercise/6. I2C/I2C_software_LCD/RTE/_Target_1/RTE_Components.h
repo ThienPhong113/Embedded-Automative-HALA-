@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'i2c_software_master' 
+ * Project: 'LCD_I2C' 
  * Target:  'Target 1' 
  */
 
