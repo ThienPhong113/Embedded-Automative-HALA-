@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>LCD_I2C</OutputName>
+          <OutputName>I2C_LCD_hardware</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -427,6 +427,12 @@
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="GPIO" Cvendor="Keil" Cversion="3.6.0" condition="STM32F1xx STDPERIPH RCC">
+        <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="I2C" Cvendor="Keil" Cversion="3.6.0" condition="STM32F1xx STDPERIPH RCC">
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
           <targetInfo name="Target 1"/>

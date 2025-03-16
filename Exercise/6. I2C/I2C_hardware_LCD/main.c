@@ -4,10 +4,10 @@ int main()
 {
 	RCC_Config();
 	TIM_Config();
+	I2C_Config();
 	GPIO_Config();
-	I2C_Init();
 	lcd_init(0x27);
-	lcd_send_string("ThienPhong");
+	lcd_send_string("MVTP");
 	while(1)
 	{
 		
@@ -22,7 +22,6 @@ void RCC_Config(void)
 }
 void TIM_Config(void)
 {
-//36000 72
 	TIM_TimeBaseInitTypeDef timer;
 	
 	timer.TIM_ClockDivision = TIM_CKD_DIV1;
@@ -47,8 +46,21 @@ void GPIO_Config(void)
 	GPIO_InitStructure.GPIO_Pin = I2C_SDA| I2C_SCL;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	
-	GPIO_Init(I2C_GPIO, &GPIO_InitStructure);
+	GPIO_Init(I2C1_GPIO, &GPIO_InitStructure);
 }
+void I2C_Config()
+{	
+	I2C_InitTypeDef I2C_InitStructure;
+	I2C_InitStructure.I2C_ClockSpeed = 400000;
+	I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
+	I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
+  I2C_InitStructure.I2C_OwnAddress1 = 0x33; 
+  I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
+  I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+  
+	I2C_Init(I2C1, &I2C_InitStructure);
+  I2C_Cmd(I2C1, ENABLE);
+ }
 
 void delay_ms(uint32_t ms)
 {
@@ -61,111 +73,16 @@ void delay_us(uint32_t us)
 	while(TIM_GetCounter(TIM3) < us);
 }
 
-void I2C_Write(uint8_t address, uint8_t byte_out)
+void I2C_Write(uint8_t addr, uint8_t byte)
 {
-	I2C_Start();
-	I2C_setAddress(address);
-	I2C_selectMode(0);
-	if(bitACK())
-	{
-		I2C_Stop();
-		return;
-	}
-	else
-	{
-		I2C_sendByte(byte_out);
-		I2C_Stop();
-	}
-}
-
-uint8_t I2C_ReadByte(uint8_t address, uint8_t resAddress)
-{
-	I2C_Start();
-	I2C_setAddress(address);
-	I2C_selectMode(0);
-	if(bitACK())
-	{
-		I2C_Stop();
-		return 0;
-	}
-	I2C_sendByte(resAddress);
-	if(bitACK())
-	{
-		I2C_Stop();
-		return 0;
-	}
-	I2C_Start();
-	I2C_setAddress(address);
-	I2C_selectMode(1);
-	if(bitACK())
-	{
-		I2C_Stop();
-		return 0;
-	}	
-}
-
-void I2C_Init(void)
-{
-	SDA_1;
-	SCL_1;
-}
-void I2C_Start(void)
-{
-	SDA_0;
-	delay_us(I2C_Cycle);
-	SCL_0;
-	delay_us(I2C_Cycle);
-}
-void I2C_setAddress(uint8_t addr)
-{
-	for(int i = 0; i < 7; i++)
-	{
-		if(addr & (0x80 >> i)) SDA_1;
-		else SDA_0;
-		SCL_1;
-		delay_us(0.5 * 0.5 * I2C_Cycle);
-		SCL_0;
-		delay_us(0.5 * I2C_Cycle);
-	}
-}
-void I2C_selectMode(bool CS)
-{
-	//CS: 0 - Write   1 - Read
-	GPIO_WriteBit(I2C_GPIO, I2C_SDA, CS);
-	SCL_1;
-	delay_us(0.5 * I2C_Cycle);
-	SCL_0;
-	delay_us(0.5 * I2C_Cycle);
-}
-bool bitACK(void)
-{
-  bool ACK;
-  delay_us(0.5 * I2C_Cycle);
-  SCL_1;
-  ACK = GPIO_ReadInputDataBit(I2C_GPIO, I2C_SDA);
-  delay_us(0.5 * I2C_Cycle);
-	SCL_0;
-  return ACK;
-}
-void I2C_sendByte(uint8_t byte)
-{
-	for(int i = 0; i < 8; i++)
-	{
-		if(byte & (0x80 >> i)) SDA_1;
-		else SDA_0;		
-		SCL_1;
-		delay_us(0.5 * 0.5 * I2C_Cycle);
-		SCL_0;
-		delay_us(0.5 * I2C_Cycle);
-	}
-}
-
-void I2C_Stop(void)
-{
-	SCL_1;
-	delay_us(I2C_Cycle);
-	SDA_1;
-	delay_us(I2C_Cycle);
+	I2C_GenerateSTART(I2C1, ENABLE);
+	while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT)); 
+	I2C_Send7bitAddress(I2C1, addr, I2C_Direction_Transmitter); 
+	while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+	I2C_SendData(I2C1, byte);
+	while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+	I2C_GenerateSTOP(I2C1, ENABLE);
+	
 }
 
 void lcd_init(uint8_t addr)
@@ -231,3 +148,4 @@ void lcd_goto_XY (int row, int col)
 	}
 	lcd_send_cmd(pos_Addr);
 }
+ 

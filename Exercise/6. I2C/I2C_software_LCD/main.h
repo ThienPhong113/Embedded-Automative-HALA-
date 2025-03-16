@@ -14,6 +14,7 @@
 #define SCL_1	GPIO_SetBits(I2C_GPIO, I2C_SCL)
 
 unsigned int I2C_Cycle = 10; //(us) - Standard mode: 100Kbit/s 
+uint8_t slave_address;
 
 void RCC_Config(void);
 void TIM_Config(void);
@@ -35,3 +36,10 @@ void I2C_Write(uint8_t address, uint8_t byte_out);
 void I2C_WriteMultiBye();
 uint8_t I2C_ReadByte(uint8_t address, uint8_t resAddress);
 uint8_t I2C_ReadMultiByte();
+
+void lcd_init(uint8_t addr);
+void lcd_send_cmd (char cmd); 
+void lcd_send_data (char data);
+void lcd_send_string (char *str);
+void lcd_clear_display (void);	
+void lcd_goto_XY (int row, int col);

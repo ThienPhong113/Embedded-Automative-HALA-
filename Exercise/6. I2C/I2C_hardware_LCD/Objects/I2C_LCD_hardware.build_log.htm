@@ -21,13 +21,62 @@ Target DLL:      UL2CM3.DLL V1.163.4.0
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-E:\Github\Embedded-Automative-HALA-\Exercise\6. I2C\I2C_software_LCD\LCD_I2C.uvprojx
-Project File Date:  02/25/2025
+E:\Github\Embedded-Automative-HALA-\Exercise\6. I2C\I2C_hardware_LCD\I2C_LCD_hardware.uvprojx
+Project File Date:  03/16/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'D:\Program Files\KeilC_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
 assembling startup_stm32f10x_ld.s...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/misc.c(131): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+                                               ~ ^~~~~~~~~~~
+1 warning generated.
+compiling misc.c...
+main.c(1): warning: In file included from...
+./main.h(28): warning: no newline at end of file [-Wnewline-eof]
+void lcd_goto_XY (int row, int col);
+                                    ^
+main.c(1): warning: In file included from...
+./main.h(1): warning: In file included from...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C6\stm32f10x_conf.h(87): warning: In file included from...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(1): warning: In file included from...
+./main.h(1): warning: In file included from...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C6\stm32f10x_conf.h(66): warning: In file included from...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_i2c.h(49): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(143): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                pos_Addr = 0x80 + row - 1 + col;
+                         ~ ~~~~~~~~~~~~~~~^~~~~
+main.c(147): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                pos_Addr = 0x80 | (0x40 + col);
+                         ~ ~~~~~^~~~~~~~~~~~~~
+main.c(151): warning: no newline at end of file [-Wnewline-eof]
+ 
+ ^
+main.c(1): warning: In file included from...
+./main.h(11): warning: no previous extern declaration for non-static variable 'slave_address' [-Wmissing-variable-declarations]
+uint8_t slave_address;
+        ^
+./main.h(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t slave_address;
+^
+7 warnings generated.
+compiling main.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_i2c.c(22): warning: In file included from...
+D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_i2c.h(49): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+1 warning generated.
+compiling stm32f10x_i2c.c...
 RTE/Device/STM32F103C6/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
 __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
             ^
@@ -36,80 +85,6 @@ __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9}
     ^
 1 warning generated.
 compiling system_stm32f10x.c...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/misc.c(131): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
-                                               ~ ^~~~~~~~~~~
-1 warning generated.
-compiling misc.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_gpio.c...
-main.c(1): warning: In file included from...
-./main.h(16): warning: no previous extern declaration for non-static variable 'I2C_Cycle' [-Wmissing-variable-declarations]
-unsigned int I2C_Cycle = 10; //(us) - Standard mode: 100Kbit/s 
-             ^
-./main.h(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-unsigned int I2C_Cycle = 10; //(us) - Standard mode: 100Kbit/s 
-^
-./main.h(36): warning: this function declaration is not a prototype [-Wstrict-prototypes]
-void I2C_WriteMultiBye();
-                      ^
-                       void
-./main.h(38): warning: this function declaration is not a prototype [-Wstrict-prototypes]
-uint8_t I2C_ReadMultiByte();
-                         ^
-                          void
-./main.h(45): warning: no newline at end of file [-Wnewline-eof]
-void lcd_goto_XY (int row, int col);
-                                    ^
-main.c(1): warning: In file included from...
-./main.h(2): warning: In file included from...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
-./RTE/Device/STM32F103C6\stm32f10x_conf.h(87): warning: In file included from...
-D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
-typedef struct
-        ^
-main.c(105): warning: non-void function does not return a value in all control paths [-Wreturn-type]
-}
-^
-main.c(126): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-                delay_us(0.5 * 0.5 * I2C_Cycle);
-                ~~~~~~~~ ~~~~~~~~~~^~~~~~~~~~~
-main.c(128): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-                delay_us(0.5 * I2C_Cycle);
-                ~~~~~~~~ ~~~~^~~~~~~~~~~
-main.c(136): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-        delay_us(0.5 * I2C_Cycle);
-        ~~~~~~~~ ~~~~^~~~~~~~~~~
-main.c(138): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-        delay_us(0.5 * I2C_Cycle);
-        ~~~~~~~~ ~~~~^~~~~~~~~~~
-main.c(143): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-  delay_us(0.5 * I2C_Cycle);
-  ~~~~~~~~ ~~~~^~~~~~~~~~~
-main.c(146): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-  delay_us(0.5 * I2C_Cycle);
-  ~~~~~~~~ ~~~~^~~~~~~~~~~
-main.c(157): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-                delay_us(0.5 * 0.5 * I2C_Cycle);
-                ~~~~~~~~ ~~~~~~~~~~^~~~~~~~~~~
-main.c(159): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
-                delay_us(0.5 * I2C_Cycle);
-                ~~~~~~~~ ~~~~^~~~~~~~~~~
-main.c(226): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-                pos_Addr = 0x80 + row - 1 + col;
-                         ~ ~~~~~~~~~~~~~~~^~~~~
-main.c(230): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-                pos_Addr = 0x80 | (0x40 + col);
-                         ~ ~~~~~^~~~~~~~~~~~~~
-main.c(1): warning: In file included from...
-./main.h(17): warning: no previous extern declaration for non-static variable 'slave_address' [-Wmissing-variable-declarations]
-uint8_t slave_address;
-        ^
-./main.h(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint8_t slave_address;
-^
-17 warnings generated.
-compiling main.c...
 D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(22): warning: In file included from...
 D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
 typedef struct
@@ -129,8 +104,8 @@ D:/Program Data/ArmPackage/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/
 5 warnings generated.
 compiling stm32f10x_tim.c...
 linking...
-Program Size: Code=2796 RO-data=268 RW-data=4 ZI-data=1644  
-".\Objects\LCD_I2C.axf" - 0 Error(s), 24 Warning(s).
+Program Size: Code=2052 RO-data=272 RW-data=0 ZI-data=1640  
+".\Objects\I2C_LCD_hardware.axf" - 0 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -147,6 +122,7 @@ Package Vendor: Keil
    * Component: Startup Version: 1.0.0
    * Component: Framework Version: 3.6.0
    * Component: GPIO Version: 3.6.0
+   * Component: I2C Version: 3.6.0
    * Component: RCC Version: 3.6.0
    * Component: TIM Version: 3.6.0
 
@@ -169,18 +145,22 @@ Package Vendor: Keil
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\misc.h
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
       Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
-      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
 
+   * Component: Keil::Device:StdPeriph Drivers:I2C:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_i2c.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_i2c.c
+
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
