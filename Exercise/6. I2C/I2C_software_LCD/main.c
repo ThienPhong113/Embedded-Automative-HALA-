@@ -7,16 +7,18 @@ int main()
 	GPIO_Config();
 	I2C_Init();
 	lcd_init(0x27);
-	lcd_send_string("ThienPhong");
 	while(1)
 	{
-		
+		//lcd_send_string("ThienPhong");
+		lcd_send_data('a');
+		delay_ms(500);
 	}
 }
 
 void RCC_Config(void)
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 }
@@ -61,6 +63,61 @@ void delay_us(uint32_t us)
 	while(TIM_GetCounter(TIM3) < us);
 }
 
+void I2C_Init(void)
+{
+	SDA_1;
+	SCL_1;
+}
+void I2C_Start(void)
+{
+	SDA_0;
+	delay_us(I2C_Cycle);
+	SCL_0;
+	delay_us(I2C_Cycle);
+}
+void I2C_setAddress(uint8_t addr)
+{
+	for(int i = 0; i < 7; i++)
+	{
+		if(addr & (0x80 >> i)) SDA_1;
+		else SDA_0;
+		SCL_1;
+		delay_us(0.5 * I2C_Cycle);
+		SCL_0;
+		delay_us(0.5 * I2C_Cycle);
+	}
+}
+void I2C_selectMode(bool CS)
+{
+	//CS: 0 - Write   1 - Read
+	GPIO_WriteBit(I2C_GPIO, I2C_SDA, CS);
+	SCL_1;
+	delay_us(0.5 * I2C_Cycle);
+	SCL_0;
+	delay_us(0.5 * I2C_Cycle);
+}
+bool bitACK(void)
+{
+  bool ACK;
+  delay_us(0.5 * I2C_Cycle);
+  SCL_1;
+  ACK = GPIO_ReadInputDataBit(I2C_GPIO, I2C_SDA);
+  delay_us(0.5 * I2C_Cycle);
+	SCL_0;
+  return ACK;
+}
+void I2C_sendByte(uint8_t byte)
+{
+	for(int i = 0; i < 8; i++)
+	{
+		if(byte & (0x80 >> i)) SDA_1;
+		else SDA_0;		
+		SCL_1;
+		delay_us(0.5 * I2C_Cycle);
+		SCL_0;
+		delay_us(0.5 * I2C_Cycle);
+	}
+}
 void I2C_Write(uint8_t address, uint8_t byte_out)
 {
 	I2C_Start();
@@ -104,61 +161,6 @@ uint8_t I2C_ReadByte(uint8_t address, uint8_t resAddress)
 	}	
 }
 
-void I2C_Init(void)
-{
-	SDA_1;
-	SCL_1;
-}
-void I2C_Start(void)
-{
-	SDA_0;
-	delay_us(I2C_Cycle);
-	SCL_0;
-	delay_us(I2C_Cycle);
-}
-void I2C_setAddress(uint8_t addr)
-{
-	for(int i = 0; i < 7; i++)
-	{
-		if(addr & (0x80 >> i)) SDA_1;
-		else SDA_0;
-		SCL_1;
-		delay_us(0.5 * 0.5 * I2C_Cycle);
-		SCL_0;
-		delay_us(0.5 * I2C_Cycle);
-	}
-}
-void I2C_selectMode(bool CS)
-{
-	//CS: 0 - Write   1 - Read
-	GPIO_WriteBit(I2C_GPIO, I2C_SDA, CS);
-	SCL_1;
-	delay_us(0.5 * I2C_Cycle);
-	SCL_0;
-	delay_us(0.5 * I2C_Cycle);
-}
-bool bitACK(void)
-{
-  bool ACK;
-  delay_us(0.5 * I2C_Cycle);
-  SCL_1;
-  ACK = GPIO_ReadInputDataBit(I2C_GPIO, I2C_SDA);
-  delay_us(0.5 * I2C_Cycle);
-	SCL_0;
-  return ACK;
-}
-void I2C_sendByte(uint8_t byte)
-{
-	for(int i = 0; i < 8; i++)
-	{
-		if(byte & (0x80 >> i)) SDA_1;
-		else SDA_0;		
-		SCL_1;
-		delay_us(0.5 * 0.5 * I2C_Cycle);
-		SCL_0;
-		delay_us(0.5 * I2C_Cycle);
-	}
-}
 
 void I2C_Stop(void)
 {
