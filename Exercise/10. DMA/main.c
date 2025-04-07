@@ -11,7 +11,12 @@ int main()
 	{
 		if(!DMA_GetFlagStatus(DMA1_FLAG_TC1))
 		{
-			TIM_SetCompare1(TIM2, (uint32_t)buffer); 
+			DMA_ClearFlag(DMA1_FLAG_TC2);
+			uint16_t deg = ((uint32_t)buffer * 180) / 4096;
+			if(deg >= 180) deg = 180;
+			else if(deg <= 0) deg = 0; 
+			uint8_t pulseWidth = 1000 + ( 2000 - 1000) * deg / 180;
+			TIM_SetCompare1(TIM2,pulseWidth);
 		}
 	}
 }
